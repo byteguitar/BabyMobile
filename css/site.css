@@ -1,0 +1,256 @@
+.ui_header{
+
+    data-inline:true;
+text-align: center;
+}
+.ui-page .ui-header, .ui-page .ui-footer {
+    position: relative;
+}
+
+.ui_header .ui-bar-a{
+    border-top: 0;
+    border-bottom: 1px solid #0f5296;
+    text-align: center;
+}
+
+
+a#header_menu_btn{
+    background:transparent;
+    margin:0px;
+
+    font-size: 10px;
+    font-weight: lighter;
+    top:-5px;
+  /*  border: 1px solid #253b56;*/
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    color: #fff;
+    text-shadow: #222 0 -1px;
+
+
+}
+
+.ui-header .ui-btn-right {
+    position: absolute;
+    right: 10px;
+}
+
+
+.ui-icon {
+    width: 18px;
+    height: 18px;
+}
+
+
+#header-menu  .ui-btn-icon-left .ui-icon, .ui-btn-icon-right .ui-icon {
+    position: absolute;
+    top: 50%;
+    margin-top:-9px;
+}
+
+#header-menu  .ui-btn-inner {
+    padding: .6em 25px;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    zoom: 1;
+}
+.ui-header .ui-btn-text{
+    width:100%;
+    font-size:11px;
+    color:white;
+
+}
+.ui-header .ui-icon, .ui-icon-searchfield:after {
+    background: #fff;
+    background: transparent;
+    background-image: url(../images/icons-18-white.png);
+    background-repeat: no-repeat;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+}
+
+
+
+
+.ui-header .ui-icon-arrow-d{background-position:-216px 50%}
+.ui-header .ui-icon-arrow-u{background-position:-180px 50%}
+
+.ui-bar-a{
+    border:1px solid #0f5296;
+    background:#3b9fde;
+    color:#3e3e3e;
+    font-weight:bold;
+    text-shadow:0 1px 1px #fff;
+    background-image:-webkit-gradient(linear,left top,left bottom,from(#3b9fde),to(#136bc3));
+    background-image:-webkit-linear-gradient(#3b9fde,#136bc3);
+    background-image:-moz-linear-gradient(#3b9fde,#136bc3);
+    background-image:-ms-linear-gradient(#3b9fde,#136bc3);
+    background-image:-o-linear-gradient(#3b9fde,#136bc3);
+    background-image:linear-gradient(#3b9fde,#136bc3);
+}
+.ui-bar-a .ui-link-inherit{color:#3e3e3e}
+.ui-bar-a .ui-link{color:#7cc4e7;font-weight:bold}
+.ui-bar-a .ui-link:hover{color:#2489ce}
+.ui-bar-a .ui-link:active{color:#2489ce}
+.ui-bar-a .ui-link:visited{color:#2489ce}
+
+a{
+    text-decoration: none;
+}
+.logo_container{
+     text-align: center;
+    margin:.5em 50px .4em;
+}
+
+.header_logo{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    width: 193px;
+    height: 27px;
+    background: url(../images/wdw_logo.png);
+    -webkit-background-size: 193px 27px
+}
+
+/*顶部大图*/
+img .main_image{
+    display:block;
+}
+img{
+    width:100%;  /*注意这个地方，让图片可以适应屏幕大小*/
+    border:0px;
+}
+
+/*重载条目分割*/
+.ui-li-divider{
+
+    line-height: 40px;
+    border-bottom: 1px solid #90a9ba;
+    color:black;
+    background: orange;/*-webkit-linear-gradient(top,#cce0ec 0,#b9d8ee 100%);*/
+    text-align:center;
+
+}
+.ui-li{
+  padding:0px;
+}
+h3 .ui-li-heading{
+font-size:12px;
+}
+
+/* ***********************************自己定义的宽屏列表*/
+.link-list-wide object
+{
+    width: 96px;
+    height: 62px;
+    vertical-align: bottom;
+}
+
+.link-list-wide .ListThumb
+{
+    width: 100%;
+    max-width: 96px;
+    vertical-align: bottom;
+
+
+}
+
+
+.ListElement   /*列表使用层来代替*/
+{
+    overflow: hidden;
+    background: #eee7d2;
+    margin-top: 2px;
+    border: none;
+    border-radius: 14px;  /*每个项目圆角*/
+}
+
+.clickable-item
+{
+    cursor: pointer;
+}
+
+.ListArrow
+{
+    height: 30px;
+    width: 17px;
+    background-image: url(../images/Icon-arrow.png);
+}
+
+#pageMain  .list-text-large{
+  font-weight:bold;
+
+}
+
+#pageMain .leading-smaller {
+    line-height: 0.9;
+}
+
+#pageMain .red, .red .bright-red {
+    color: #a52020 !important;
+}
+
+/*------carousel-------*/
+
+.iPhoneRollDownItem
+{
+    -webkit-transition: all 500ms ease-in-out;
+    overflow: hidden;
+}
+div.iPhoneRollDownItem ul, div.iPhoneRollDownItem li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.CarouselItem
+{
+    float: left;
+}
+.carousel-pic
+{
+    margin: 7px 7px 0;
+}
+#CarouselItemContainer
+{
+    position: relative;
+    width: 100000px;
+}
+.pagination-dot
+{
+    float: left;
+    background-image: url(../../Content/images/Carousel/PaginationDots_Brown.png);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+}
+
+input[type="text"]
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/****************hidden head menu*********/
+
+.header-menu {
+    position:absolute;
+    background: #fff;
+    z-index: 1200;
+    border-radius: .5em 0 .5em .5em;
+    -webkit-box-shadow: 0 1px 13px 0 #333;
+    box-shadow: 0 1px 13px 0 #333;
+    font-size: 12px;
+}
+
+
+/************jquery validate*/
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }

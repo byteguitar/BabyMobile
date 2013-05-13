@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>婴儿护理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.2.1.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+
+    <script src="jquery.mobile-1.2.1.min.js"></script>
+
+<link rel="stylesheet" href="css/jqm-datebox.min.css"/>
+    <script src="js/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script>
+	    <script src="js/jqm-datebox.mode.calbox.min.js"></script>
+    <script src="js/base.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/BLL/CBabyMilkCare.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/pages/pageInsertBaby.js"></script>
+    <script src="js/pages/pageConfigBaby.js"></script>
+
+</head>
+
+<body>
+
+<div data-role="page" id="pageMain">
+
+    <div data-role="header"  data-position="inline" class="ui_header ui-bar-a">
+        <a href="#"  id="header_menu_btn" class="ui-btn ui-btn-right ui-btn-icon-right " data-icon="arrow-d" data-iconpos="right" >
+            <span class="ui-btn-inner" id="popupMenu">
+                <span class="ui-btn-text">菜单</span>
+                <span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+             </span>
+        </a>
+
+        <div class="logo-container">
+
+          <a href="#"  class="ui-link">
+              <div class="header_logo">
+
+              </div>
+
+          </a>
+        </div>
+        <img src="images/mainhero_512x512.png" />
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true"  id="pageMain_listRegister">
+            <li data-role="list-divider">登陆向导</li>
+<li>
+
+    <form class="cmxform" id="commentForm" method="get" action="">
+        <fieldset>
+            <p>
+            <label for="txtEmail">请输入你的邮件地址</label>
+            <input id="txtEmail" name="txtEmail" value="" type="text" placeholder="Text input"  class="required">
+            </p>
+            <p>
+                <label for="txtNickName">昵称</label>
+                <input id="txtNickName" name="txtNickName"  class="required nickname nickrepeat" size="25"  minlength="2" />
+            </p>
+            <!--
+            <p>
+                <label for="cemail">E-Mail</label>
+                <input id="cemail" name="email" size="25"  class="required email" />
+            </p>
+            <p>
+                <label for="curl">URL</label>
+                <input id="curl" name="url" size="25"  class="url" value="" />
+            </p>
+            <p>
+                <label for="ccomment">Your comment</label>
+                <textarea id="ccomment" name="comment" cols="22"  class="required"></textarea>
+            </p>
+            -->
+            <p style="text-align:center">
+                <input class="submit" type="submit" value="提交" data-inline="true"/>
+
+            </p>
+        </fieldset>
+    </form>
+
+</li>
+
+        </ul>
+
+        <div data-role="fieldcontain" >
+            <label for="pageMain_selectBaby">婴儿列表</label>
+            <select name="pageMain_selectBaby" id="pageMain_selectBaby" >
+
+            </select>
+        </div>
+
+        <div class="link-list-wide" id="divCareStatus">
+
+
+        </div>
+
+        <div id="hideMenu" class="hide header-menu" style=" visibility: inherit;top: 42px;
+        right: 10px; width: 80%; display:none;">
+            <ul data-role="listview"  data-divider-theme="d" id="ulHideMenu">
+                <li data-role="list-divider">登记宝宝</li>
+                <li><a href="#">创建一个新生儿记录</a></li>
+
+                <li data-role="list-divider">宝宝列表</li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Work</a></li>
+            </ul>
+
+        </div>
+
+
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+	<ul>
+		<li><a href="a.html">护理状态</a></li>
+		<li><a href="b.html">孕期状态</a></li>
+	</ul>
+</div><!-- /navbar -->
+
+	</div>
+
+
+</div><!-- /page -->
+
+
+<!------------------------------------------------------------------------>
+<div data-role="page" id="pageRegister">
+	<div data-role="content">
+	   <ul data-role="listview" data-inset="true">
+	               <li data-role="list-divider">已经怀孕</li>
+	   <li>
+	  <form>           
+	   <label>        <input  type="checkbox">已经至少拥有一个baby </label>
+<input name="mydate" id="mydate" type="date" data-role="datebox"
+   data-options='{"mode": "calbox"}'>
+   <a href="#pageConfigBaby" data-role="button" data-mini="true" data-inline="true">下一步</a>
+ </form>
+	   </li>
+	           <li data-role="list-divider">还没有怀孕</li>
+	   <li>
+	   	   <label>        <input  type="checkbox">Check me </label>
+	   </li>
+  </ul>
+	</div>
+</div>
+
+
+
+<!--------------------------------------->
+<div data-role="page" id="pageConfigBaby">
+	<div data-role="content">
+        <a href="#pageInsertBaby" data-role="button" data-inline="true">添加婴儿信息</a>
+	   <ul data-role="listview" data-inset="true" id="pageConfigBaby_listBaby">
+
+
+	   </ul>
+	   </div>
+</div>
+
+<div data-role="page" id="pageInsertBaby">
+    <div data-role="content">
+        <form class="cmxform" id="commentForm" method="get" action="">
+            <fieldset>
+                <p>
+                    <label for="txtBabyNamne">宝宝名字</label>
+                    <input id="txtBabyName" name="txtBabyName" value="" type="text" placeholder="请输入宝宝名字  class="required">
+                </p>
+              </fieldset>
+            <a href="#" id="pageInsertBaby_butSubmit" data-role="button" accesskey="">提交</a>
+
+          </form>
+        </div>
+ </div>
+
+
+<!------------------------------------------->
+
+<div data-role="page" id="pageMilkCare">
+    <div data-role="content">
+        <ul  id="pageMilkCare_listMilkCare">
+
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+
+    $("#pageMain").live("pagebeforeshow", function (event) {
+
+
+        $("#popupMenu").toggle(function(){
+                    $("#popupMenu .ui-icon").removeClass("ui-icon-arrow-d");
+                    $("#popupMenu .ui-icon").addClass(" ui-icon-arrow-u");
+                    $("#hideMenu").show();
+                },
+                function(){
+                    $("#popupMenu .ui-icon").removeClass("ui-icon-arrow-u");
+                    $("#popupMenu .ui-icon").addClass(" ui-icon-arrow-d");
+                    $("#hideMenu").hide();
+                }
+        );
+    });
+
+
+
+
+
+</script>

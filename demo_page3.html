@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+			<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2"> 
+	<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+	<script src="jquery-1.6.2.min.js"></script>
+	<script src="jquery.mobile-1.1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="foo">
+
+	<div data-role="header">
+		<h1>Page Header</h1>
+
+	</div><!-- /header -->
+
+	<div data-role="content">	
+
+	<p><a href="demo_external.html" >默认ajax载入页面</a></p>
+	<p><a href="demo_noexist.html" >默认载入不存在的页面，提示错误</a></p>
+	<p>	<a href="demo_external.html" data-ajax="false" rel="external"> 不用ajax载入页面</a></p>
+	<p>	<a href="demo_external.html#bar" data-ajax="false" rel="external"> 不用ajax载入外部页面，载入外部的bar页面</a></p>
+	<p>	<a href="demo_external.html#foo"  rel="external"> 不用ajax载入外部页面，载入外部的foo页面</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+{{#view App.ContentView_ListBabyRecord}}
+<ul data-role="listview" id="listBabyRecord">
+   {{#each view.content}}
+        <li>{{title}}</li>
+    {{/each}}
+   
+
+  </ul>
+
+
+ <button {{action "insertBabyCare" target="view"}} value="insert" >insert </button>
+
+
+
+{{/view}}
+

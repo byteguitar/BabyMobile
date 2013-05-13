@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>演示data-attribue</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.3.1.js"></script>
+
+
+    <script type="text/javascript">
+
+    //我们将通过传统的js和JQuery 来显示基本的data-role技术。
+        function getElementAttribute(elemID)
+        {
+        var theElement = document.getElementById(elemID);
+        var theAttribute = theElement.getAttribute('data-product-category');
+        alert(theAttribute);
+
+        theAttribute = theElement.dataset.productCategory;
+        alert("通过dataset得到的属性是:"+theAttribute);
+
+        theElement.dataset.productCategory="shoe";
+        alert(theElement.dataset.productCategory);
+        console.log(" ok");
+
+ }
+
+$(function(){
+    //输出调试信息到浏览器的控制台
+   console.log("Application is begining!");
+
+    $("#butJquery").bind("click",function(){
+        console.log($("#product1").attr("data-product-category"));
+        console.log($("#product1").data("product-category"));
+        //我们可以自己设计自己的针对data-xx的样式修改
+        var dataRole=$("#product2").data("role");
+        console.log(dataRole);
+        if(dataRole="car")
+        {
+            console.log("change div css");
+           $("#product2").css("background-color","#ff0000");
+           $("#product2").css("width","200px");
+           $("#product2").css("height","200px");
+        }
+        
+    });
+});
+    
+</script>
+
+<style>
+
+     /*可以看到更高级的data-xx属性在css中的应用*/
+    .data_custom { display:inline-block; position: relative;width:200px;height:200px;border:1px solid black }
+    .data_custom:hover { color: transparent; }
+    .data_custom:hover:after {
+        content: attr(data-role);
+        color: white;
+        position: absolute;
+        left: 0;
+        background-color: green;
+    }
+
+</style>
+
+
+
+</head> 
+
+
+<body> 
+
+<div id="product1" data-product-category="clothing" > 
+</div>
+
+<div id="product2" data-role="car">
+
+</div>
+
+
+
+
+<input type="button" onclick="getElementAttribute('product1')" value="get attribute" />
+
+<input type="button" id="butJquery" value="jquery 测试得到属性" />
+
+
+<div  class="data_custom" data-role="animal">自己定义的属性层，测试
+</div>
+</body>
+</html>
+
+

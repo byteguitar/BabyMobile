@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>演示不使用JQuerymobile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.9.1.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+
+$(function(){
+    //输出调试信息到浏览器的控制台
+   console.log("Application is begining!");
+   $("input[data-role='mobilebutton']").addClass("btn");
+
+});
+    
+</script>
+
+        <style>
+
+          .btn{
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+          }
+        </style>
+
+<style>
+
+
+
+</style>
+
+
+
+</head> 
+
+
+<body> 
+<input type="button" data-role="mobilebutton"  value="submit"/>
+</body>
+</html>
+
+

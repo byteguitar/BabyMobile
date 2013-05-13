@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+			<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2"> 
+	<link rel="stylesheet" href="jquery.mobile-1.1.1.css" />
+	<script src="jquery-1.6.2.min.js"></script>
+	<script src="jquery.mobile-1.1.1.js"></script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="foo">
+
+	<div data-role="header">
+		<h1>页面过渡</h1>
+
+	</div><!-- /header -->
+
+	<div data-role="content">	
+<a href="page-transitions-dialog.html" data-role="button" data-rel="dialog" data-transition="fade"  >fade方式</a>
+<a href="page-transitions-dialog.html" data-role="button" data-rel="dialog" data-transition="flip"  >flip方式</a>
+<a href="page-transitions-dialog.html" data-role="button" data-rel="dialog" data-transition="pop"   >pop方式</a>
+
+<a href="#dialog-success" data-role="button" data-rel="dialog" data-transition="pop" data-inline="true"  >dialog</a>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+
+
+</div><!-- /page -->
+
+
+
+
+
+	<div data-role="page" id="dialog-success" data-dom-cache="true"><!-- dialog-->
+
+		<div data-role="header" data-theme="e">
+			<h1>Dialog</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" data-theme="e">
+			<p>我是对话框，采用了样式e
+			
+			<a href="docs-transitions.html" data-role="button" data-theme="b" data-rel="back">返回</a>   
+		</div>
+	</div>
+
+
+</body>
+
+
+</html>
+

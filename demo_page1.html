@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+			<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+
+        <script src="js/jquery-1.6.2.min.js"></script>
+
+        <script src="js/jquery.mobile-1.3.1.js"></script>
+        <script accesskey="">
+
+        </script>
+</head> 
+<body> 
+
+<div data-role="page" id="mainPage">
+
+	<div data-role="header">
+		<h1>头部</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+			   <label>        <input  type="checkbox" data-theme="b">Check me </label>
+		<p>Hello world</p>		
+		<p>这个层放我们要显示的具体内容</p>
+	</div><!-- /content -->
+
+	<div data-role="footer"><h1>底部</h2></div> 
+
+</div><!-- /page -->
+
+</body>
+
+<script>
+    $(function(){
+
+    });
+    $("#mainPage").live("pagebeforeshow",function(event){
+        alert('tt');
+    });
+
+</script>
+</html>

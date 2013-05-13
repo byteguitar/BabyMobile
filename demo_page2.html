@@ -1,0 +1,56 @@
+	<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+			<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2">
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+        <script src="js/jquery-1.6.2.min.js"></script>
+        <script src="js/jquery.mobile-1.1.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="foo">
+
+	<div data-role="header">
+		<h1>Foo</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		   <label>        <input  type="checkbox" data-theme="b">Check me </label>
+		<p>我的页面id是foo</p>		
+		<p>跳转到bar的页面 <a href="#bar">bar</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>我的页面ID是		<h4 id="name"></h4></p>		
+
+		<p><a href="#foo">回到foo页面</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
+
+<script>
+$(function(){
+$("#name").text($("#bar").attr("id"));  //这里使用了动态获得名字
+});
+</script>
